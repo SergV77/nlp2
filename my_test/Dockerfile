@@ -2,7 +2,10 @@ FROM python:3
 
 EXPOSE 5000
 
-RUN apt-get clean && apt-get update
+RUN apt-get update -y
+RUN apt-get install -y python-pip
+
+RUN pip install -r requirements.txt
 
 ADD app.py /
 
