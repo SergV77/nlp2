@@ -1,9 +1,7 @@
-FROM python:3-onbuild
+FROM python:3
 
 EXPOSE 5000
 
-RUN mkdir /app
-COPY . /app
-WORKDIR /app 
+ADD app.py /
 
 CMD ["python", "./app.py"]
