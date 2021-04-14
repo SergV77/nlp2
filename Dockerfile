@@ -8,5 +8,6 @@ COPY ./my_test/requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 COPY ./my_test .
+RUN ls -l
 
 CMD ["python", "./app.py"]
