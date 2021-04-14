@@ -1,12 +1,12 @@
-FROM python:3
+FROM python:3.7-slim-buster
+
+WORKDIR /app
 
 EXPOSE 5000
 
-RUN apt-get update -y
-RUN apt-get install -y python-pip
-
+COPY ./my_test/requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-COPY . .
+COPY ./my_test .
 
 CMD ["python", "./app.py"]
