@@ -28,5 +28,5 @@ jobs:
          context: ./
          file: ./Dockerfile
          push: true
-         tags: dockerhub_login/repo_name:image_name
+         tags: ${{ secrets.DOCKER_HUB_LOGIN }}/tst:test_image
          
