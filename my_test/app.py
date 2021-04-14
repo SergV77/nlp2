@@ -2,8 +2,7 @@
 #-*- coding: utf-8 -*-
 
 from locLib import *
-from locFunction import *
-from handler import *
+
 
 from flask import Flask
 app = Flask(__name__)
@@ -43,11 +42,10 @@ def requestApi():
         conceptId.append(out['idConcept'])
         conceptCh.append(out['chance'])
 
-    diagnosis = handlerConcept(conceptId)
+    
 
-    result = {}
-    for keys, values in diagnosis.items():
-        result[keys] = round(values, 2)
+    result = {f"Имя концепта: {conceptName}, ID концепта: {conceptId}, Вероятность концепта: {conceptCh}"}
+    
 
     return result
 
