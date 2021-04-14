@@ -39,7 +39,8 @@ jobs:
         password: ${{ secrets.MAIN_PWD }}
         port: ${{ secrets.MAIN_PORT }}
         script: |
-          docker stop test_flask || true && docker rm test_flask || true
+         ls
+    
 
 
          
