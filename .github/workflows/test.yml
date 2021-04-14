@@ -32,6 +32,7 @@ jobs:
          
      - name: deploy
        id: delp
+       uses: appleboy/ssh-action@master
        with:
         host: ${{ secrets.MAIN_HOST }}
         username: ${{ secrets.MAIN_USERNAME }}
