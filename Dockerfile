@@ -10,4 +10,4 @@ RUN pip install -r requirements.txt
 COPY ./my_test .
 RUN ls -l
 
-CMD ["python", "./app.py"]
+CMD ["python3", "./app.py"]
