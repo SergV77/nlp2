@@ -30,3 +30,17 @@ jobs:
          push: true
          tags: ${{ secrets.DOCKER_HUB_LOGIN }}/tst:test_image
          
+     - name: deploy
+       id: delp
+       with:
+        host: ${{ secrets.MAIN_HOST }}
+        username: ${{ secrets.MAIN_USERNAME }}
+        password: ${{ secrets.MAIN_PWD }}
+        port: ${{ secrets.MAIN_PORT }}
+        script: |
+          docker stop test_flask || true && docker rm test_flask || true
+          docker login -u ${{ secrets.DOCKER_HUB_LOGIN }} -p ${{ secrets.DOCKER_HUB_PWD }}
+          docker pull ${{ secrets.DOCKER_HUB_LOGIN }}/tst:test_image
+          docker run --name test_flask -d -p 5000:5000 ${{ secrets.DOCKER_HUB_LOGIN }}/tst:test_image
+
+         
