@@ -7,6 +7,6 @@ RUN apt-get install -y python-pip
 
 RUN pip install -r requirements.txt
 
-ADD app.py /
+COPY . .
 
 CMD ["python", "./app.py"]
