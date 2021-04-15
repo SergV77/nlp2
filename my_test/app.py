@@ -35,8 +35,7 @@ def requestApi():
 
     for out in outs['Result']:
         print(out['nameConcept'])
-        print(out['idConcept'])
-        print(out['id'])
+        print(out['idConcept'])        
         print(out['chance'])
         conceptName.append(out['nameConcept'])
         conceptId.append(out['idConcept'])
