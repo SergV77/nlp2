@@ -11,6 +11,4 @@ from flask import Flask
 from flask import request
 
 import numpy as np
-
-
 from tensorflow.keras.models import load_model
