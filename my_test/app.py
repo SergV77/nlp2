@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 
-from locLib import *
+import locLib
 
 
 from flask import Flask
