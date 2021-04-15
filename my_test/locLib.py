@@ -5,6 +5,9 @@ import collections #Модуль специализированных типов
 import math # Библиотека математических функций
 import requests
 import json
+import pickle
 
 from flask import Flask
 from flask import request
+
+from sklearn.model_selection import train_test_split
