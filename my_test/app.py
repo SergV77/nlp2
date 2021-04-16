@@ -2,7 +2,7 @@
 #-*- coding: utf-8 -*-
 
 from locLib import *
-from handler import *
+
 
 
 from flask import Flask
