@@ -42,14 +42,14 @@ def requestApi():
         conceptId.append(out['idConcept'])
         conceptCh.append(out['chance'])
 
-    diagnosis = handlerConcept(conceptId)
+    #diagnosis = handlerConcept(conceptId)
 
-    result = {}
-    for keys, values in diagnosis.items():
-        result[keys] = round(values, 2)
+    #result = {}
+    #for keys, values in diagnosis.items():
+    #    result[keys] = round(values, 2)
 
 
-    #result = {'Имя концепта': conceptName, 'ID концепта': conceptId, 'Вероятность концепта': conceptCh}
+    result = {'Имя концепта': conceptName, 'ID концепта': conceptId, 'Вероятность концепта': conceptCh}
     
 
     return result
