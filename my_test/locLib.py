@@ -5,7 +5,7 @@ import collections #Модуль специализированных типов
 import math # Библиотека математических функций
 import json
 
-from flask imporet Flask
+from flask import Flask
 from flask import request
 
 
