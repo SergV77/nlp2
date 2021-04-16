@@ -11,5 +11,4 @@ import pickle
 from flask import Flask
 from flask import request
 
-from tensorflow.keras import utils # Утилиты для to_categorical
 from tensorflow.keras.models import load_model # загрузка сохраненных моделей
